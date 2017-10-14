@@ -1,13 +1,2 @@
-oracle-instantclient12.1-basic-12.1.0.2.0-1.x86_64.rpm
-oracle-instantclient12.1-sqlplus-12.1.0.2.0-1.x86_64.rpm
 WinCC_OA_3.15-api-rhel-0-6.x86_64.rpm
-WinCC_OA_3.15-applications-rhel-0-6.x86_64.rpm
 WinCC_OA_3.15-base-rhel-0-6.x86_64.rpm
-WinCC_OA_3.15-help-de-rhel-0-6.x86_64.rpm
-WinCC_OA_3.15-help-en-rhel-0-6.x86_64.rpm
-WinCC_OA_3.15-help-ru-rhel-0-6.x86_64.rpm
-WinCC_OA_3.15-rdb-oracle-libs12-rhel-0-6.x86_64.rpm
-WinCC_OA_3.15-s7plus-rhel-0-6.x86_64.rpm
-WinCC_OA_3.15-specialfunctions-rhel-0-6.x86_64.rpm
-WinCC_OA_3.15-sqldrivers-rhel-0-6.x86_64.rpm
-WinCC_OA_3.15-video-rhel-0-6.x86_64.rpm

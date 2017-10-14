@@ -1,7 +1,7 @@
 FROM centos:7.2.1511
 RUN systemd-machine-id-setup
 RUN yum install -y \
-java-1.8.0-openjdk-devel git krb5-devel net-tools mesa-dri-drivers \
+java-1.8.0-openjdk-devel git which krb5-devel net-tools mesa-dri-drivers \
 SDL \
 alsa-lib \
 cairo \
@@ -107,3 +107,6 @@ xml-common \
 zip \
 zlib-devel 
 RUN yum clean all
+RUN curl -SL http://mirror.klaus-uwe.me/apache/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz | tar -xz -C /opt;
+ADD config /config
+RUN cp /config/java.sh /etc/profile.d/

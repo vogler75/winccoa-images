@@ -1,9 +1,0 @@
-TEST = 
-  (DESCRIPTION =
-    (ADDRESS_LIST =
-      (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.163.3)(PORT = 1521))
-    )
-    (CONNECT_DATA =
-      (SERVICE_NAME = TEST)
-    )
-  )

@@ -1,0 +1,9 @@
+ORCL = 
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = oracle-server)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = ORCL)
+    )
+  )
