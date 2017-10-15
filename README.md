@@ -33,5 +33,5 @@ cd winccoa-server-java; ./build.sh # java + oa4j
 cd winccoa-server-mqtt; ./build.sh
 ./run.sh 
 # on Linux allow clients to connect to your X-Windows-Server (Xorg -listen tcp & "xhost +")
-# on Windows you should change the DISPLAY variable and use a XWin software (e.g. Xming)
+# on Windows you should change the DISPLAY variable and use XWin software (e.g. Xming)
 ```
