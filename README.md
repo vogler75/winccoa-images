@@ -21,11 +21,11 @@ docker exec -ti oa bash
 ```
 
 # MQTT Example
-This will startup a project with the MQTT driver and a local running MQTT broker.
-Use any MQTT client (e.g. Google Chrome MQTTlens) to send/read ExampleDP_* datapoints.
-Values are JSON encoded - e.g. { "Value": 42 }
-ExampleDP_Arg1,ExampleDP_Arg2 are configured as inputs to OA (MQTT => OA)
-ExampleDP_Result is configured an output (OA => MQTT)
+This will startup a project with the MQTT driver and a local running MQTT broker.<br>
+Use any MQTT client (e.g. Google Chrome MQTTlens) to send/read ExampleDP_* datapoints.<br>
+Values are JSON encoded - e.g. { "Value": 42 }<br>
+ExampleDP_Arg1,ExampleDP_Arg2 are configured as inputs to OA (MQTT => OA)<br>
+ExampleDP_Result is configured an output (OA => MQTT)<br>
 ```
 cd winccoa-centos; ./build.sh
 cd winccoa-server-core; ./build.sh # copy wincc oa software rpm's to the software directory
