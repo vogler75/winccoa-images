@@ -1,0 +1,7 @@
+# ascii dump of database
+
+# PeriphAddrMain
+Manager/User	ElementName	TypeName	_address.._type	_address.._reference	_address.._poll_group	_address.._connection	_address.._offset	_address.._subindex	_address.._direction	_address.._internal	_address.._lowlevel	_address.._active	_address.._start	_address.._interval	_address.._reply	_address.._datatype	_address.._drv_ident
+UI (1)/0	ExampleDP_Arg1.	ExampleDP_Float	16	"ExampleDP_Arg1"	 	 	0	0	\2	0	0	1	01.01.1970 00:00:00.000	01.01.1970 00:00:00.000	01.01.1970 00:00:00.000	1002	"SAMPLE"
+UI (1)/0	ExampleDP_Arg2.	ExampleDP_Float	16	"ExampleDP_Arg2"	 	 	0	0	\2	0	0	1	01.01.1970 00:00:00.000	01.01.1970 00:00:00.000	01.01.1970 00:00:00.000	1002	"SAMPLE"
+UI (1)/0	ExampleDP_Result.	ExampleDP_Float	16	"ExampleDP_Result"	 	 	0	0	\1	0	0	1	01.01.1970 00:00:00.000	01.01.1970 00:00:00.000	01.01.1970 00:00:00.000	1002	"SAMPLE"

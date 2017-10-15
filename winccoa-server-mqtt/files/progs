@@ -1,0 +1,17 @@
+version 1
+
+auth "" ""
+#Manager         | Start  | SecKill | Restart# | ResetMin | Options
+WCCILpmon        | manual |      30 |        3 |        1 |
+WCCILdata        | always |      30 |        3 |        1 |
+WCCOAvalarch     | always |      30 |        3 |        1 |-num 0
+WCCOAvalarch     | always |      30 |        3 |        1 |-num 1
+WCCOAvalarch     | always |      30 |        3 |        1 |-num 2
+WCCOAvalarch     | always |      30 |        3 |        1 |-num 3
+WCCOAvalarch     | always |      30 |        3 |        1 |-num 4
+WCCOAvalarch     | always |      30 |        3 |        1 |-num 5
+WCCILevent       | always |      30 |        3 |        1 |
+WCCILproxy       | always |      30 |        2 |        2 |
+WCCOActrl        | always |      30 |        3 |        1 |-f pvss_scripts.lst
+WCCOAjavadrv     | always |      30 |        2 |        2 |-cp bin/winccoa-mqtt-0.1.jar -url $URL -cid $CID -json -clean $CLEAN
+WCCOAui          |   once |      30 |        3 |        1 |-m gedi -user root:

@@ -1,0 +1,5 @@
+[general]
+pvss_path = "/opt/WinCC_OA/3.15"
+proj_path = "/opt/oa4j-drivers/Mqtt"
+proj_version = "3.15"
+langs = "en_US.utf8"
