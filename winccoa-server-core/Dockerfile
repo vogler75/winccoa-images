@@ -1,4 +1,4 @@
-FROM winccoa-centos:7.2
+FROM winccoa-centos
 ADD software /software
 ADD config /config
 RUn yum install -y \
