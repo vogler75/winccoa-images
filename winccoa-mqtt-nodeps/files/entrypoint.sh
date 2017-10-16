@@ -5,7 +5,7 @@
 
 cd `dirname $0` 
 
-source docker-entrypoint.env
+source entrypoint.env
 
 # if db directory does not exists it is the initial/first installation
 if [ ! -d $PDIR/$PROJ/db ] # if db does not exists, create it
@@ -20,7 +20,10 @@ then
   envsubst < /files/config > $PDIR/$PROJ/config/config
   envsubst < /files/progs > $PDIR/$PROJ/config/progs
 
-  mv $PDIR/$PROJ/config/config.level.linux $PDIR/$PROJ/config/config.level
+  # langs
+  for lang in `echo $LANGS`; do
+    echo "langs = \"$lang\"" >> $PDIR/$PROJ/config/config
+  done
 
   # example dplist
   cp /files/*.dpl $PDIR/$PROJ/dplist

@@ -1,4 +1,4 @@
-FROM winccoa-server
+FROM winccoa-base
 ADD software /software
 ADD config /config
 RUN yum install -y \
