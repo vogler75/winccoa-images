@@ -37,5 +37,5 @@ docker run -d -v /home:/home -p 5678:5678 -p 1883:1883 -e DISPLAY=172.17.0.1:0 w
 # on Windows you should change the DISPLAY variable and use XWin software (e.g. Xming)
 
 optionally you can use the all in one Dockerfile "winccoa-mqtt-nodeps"
-docker build https://github.com/vogler75/winccoa-images/winccoa-mqtt-nodeps -t winccoa-mqtt
+docker build winccoa-mqtt-nodeps -t winccoa-mqtt
 ```
