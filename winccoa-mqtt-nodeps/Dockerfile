@@ -37,4 +37,4 @@ RUN yum install -y --nogpgcheck mosquitto gettext && \
 source /etc/profile.d/java.sh && \
 git clone https://github.com/vogler75/oa4j-drivers.git /opt/oa4j-drivers && \
 cd /opt/oa4j-drivers/Mqtt; ./make.sh
-CMD ["/bin/bash", "/files/entrypoint.sh"]
+CMD ["/files/entrypoint.sh"]
