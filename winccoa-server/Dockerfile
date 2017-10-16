@@ -1,7 +1,7 @@
 FROM winccoa-centos
 ADD software /software
 ADD config /config
-RUn yum install -y \
+RUN yum install -y \
 /software/WinCC_OA_3.15-base-rhel-0-6.x86_64.rpm \
 /software/WinCC_OA_3.15-api-rhel-0-6.x86_64.rpm
 RUN yum clean all
