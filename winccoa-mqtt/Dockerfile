@@ -6,4 +6,5 @@ RUN source /etc/profile.d/java.sh && \
 git clone https://github.com/vogler75/oa4j-drivers.git /opt/oa4j-drivers && \
 cd /opt/oa4j-drivers/Mqtt; ./make.sh
 ADD files /files
-CMD ["/files/entrypoint.sh"]
+ADD entrypoint.sh /
+CMD ["/entrypoint.sh"]

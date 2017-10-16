@@ -5,7 +5,11 @@
 
 cd `dirname $0` 
 
-source entrypoint.env
+source /etc/profile.d/winccoa.sh 
+source /etc/profile.d/java.sh
+
+PROJ=Mqtt
+PDIR=/opt/oa4j-drivers
 
 # if db directory does not exists it is the initial/first installation
 if [ ! -d $PDIR/$PROJ/db ] # if db does not exists, create it
