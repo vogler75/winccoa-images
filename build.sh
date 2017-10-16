@@ -1,6 +1,6 @@
-docker rmi winccoa-base winccoa-centos winccoa-java winccoa-mqtt winccoa-orcl
-cd winccoa-centos; ./build.sh; cd ..
-cd winccoa-base; ./build.sh; cd ..
-cd winccoa-java; ./build.sh; cd ..
-cd winccoa-mqtt; ./build.sh; cd ..
-cd winccoa-orcl; ./build.sh; cd ..
+docker rmi winccoa-centos winccoa-base winccoa-java winccoa-mqtt winccoa-orcl
+docker build winccoa-centos -t winccoa-centos
+docker build winccoa-base -t winccoa-base
+docker build winccoa-java -t winccoa-java
+docker build winccoa-mqtt -t winccoa-mqtt
+docker build winccoa-orcl -t winccoa-orcl
