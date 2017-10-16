@@ -2,6 +2,7 @@ FROM centos
 RUN systemd-machine-id-setup
 RUN yum install -y --nogpgcheck \
 epel-release krb5-devel net-tools mesa-dri-drivers libotr \
+liberation-fonts-common liberation-mono-fonts liberation-sans-fonts \
 SDL \
 alsa-lib \
 cairo \

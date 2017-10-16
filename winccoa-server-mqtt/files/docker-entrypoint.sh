@@ -17,10 +17,6 @@ then
   done
 
   # config settings
-  export URL=${URL:-tcp://localhost}
-  export CID=${CID:-$HOSTNAME}
-  export CLEAN=${CLEAN:-true}
-
   envsubst < /files/config > $PDIR/$PROJ/config/config
   envsubst < /files/progs > $PDIR/$PROJ/config/progs
 
