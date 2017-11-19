@@ -3,6 +3,7 @@ RUN systemd-machine-id-setup
 RUN yum install -y --nogpgcheck \
 epel-release krb5-devel net-tools mesa-dri-drivers libotr \
 liberation-fonts-common liberation-mono-fonts liberation-sans-fonts \
+dejavu-fonts-common dejavu-sans-fonts \
 SDL \
 alsa-lib \
 cairo \
@@ -100,7 +101,6 @@ perl-threads \
 perl-threads-shared \
 pixman \
 pulseaudio-libs \
-stix-fonts \
 tcp_wrappers-libs \
 tcsh \
 xkeyboard-config \
