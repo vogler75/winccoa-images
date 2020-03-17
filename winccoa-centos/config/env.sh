@@ -1,0 +1,4 @@
+export WINCCOA_HOME=/opt/WinCC_OA/current
+export API_ROOT=$WINCCOA_HOME/api
+export PATH=$PATH:$WINCCOA_HOME/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WINCCOA_HOME/bin

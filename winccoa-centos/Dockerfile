@@ -1,110 +1,13 @@
-FROM centos
-RUN systemd-machine-id-setup
-RUN yum install -y --nogpgcheck \
-epel-release krb5-devel net-tools mesa-dri-drivers libotr \
-liberation-fonts-common liberation-mono-fonts liberation-sans-fonts \
-dejavu-fonts-common dejavu-sans-fonts \
-SDL \
-alsa-lib \
-cairo \
-cdparanoia-libs \
-cpp \
-flac-libs \
-fontconfig \
-fontpackages-filesystem \
-freetype \
-gcc \
-gcc-c++ \
-glibc-devel \
-glibc-headers \
-graphite2 \
-groff-base \
-gsm \
-gstreamer1 \
-gstreamer1-plugins-base \
-harfbuzz \
-hwdata \
-iso-codes \
-kernel-headers \
-libICE \
-libSM \
-libX11 \
-libX11-common \
-libXau \
-libXcomposite \
-libXdamage \
-libXext \
-libXfixes \
-libXft \
-libXi \
-libXrender \
-libXtst \
-libXv \
-libXxf86vm \
-libaio \
-libasyncns \
-libdrm \
-libgomp \
-libicu \
-libjpeg-turbo \
-libmodman \
-libmpc \
-libogg \
-libpciaccess \
-libpng \
-libproxy \
-libsndfile \
-libstdc++-devel \
-libthai \
-libtheora \
-libusbx \
-libvisual \
-libvorbis \
-libxcb \
-libxshmfence \
-libxslt \
-make \
-mesa-libEGL \
-mesa-libGL \
-mesa-libgbm \
-mesa-libglapi \
-mpfr \
-opus \
-orc \
-pango \
-perl \
-perl-Carp \
-perl-Encode \
-perl-Exporter \
-perl-File-Path \
-perl-File-Temp \
-perl-Filter \
-perl-Getopt-Long \
-perl-HTTP-Tiny \
-perl-PathTools \
-perl-Pod-Escapes \
-perl-Pod-Perldoc \
-perl-Pod-Simple \
-perl-Pod-Usage \
-perl-Scalar-List-Utils \
-perl-Socket \
-perl-Storable \
-perl-Text-ParseWords \
-perl-Time-HiRes \
-perl-Time-Local \
-perl-constant \
-perl-libs \
-perl-macros \
-perl-parent \
-perl-podlators \
-perl-threads \
-perl-threads-shared \
-pixman \
-pulseaudio-libs \
-tcp_wrappers-libs \
-tcsh \
-xkeyboard-config \
-xml-common \
-zip \
-zlib-devel 
+FROM centos:centos7.7.1908
+ADD software /software
+RUN yum install -y `cat /software/dependencies.txt`
+RUN yum install -y /software/WinCC_OA_3.16-*.rpm
 RUN yum clean all
+RUN systemd-machine-id-setup
+ADD config /config
+RUN ln -s /opt/WinCC_OA/3.16 /opt/WinCC_OA/current; \
+cat /config/env.sh >> /etc/environment; \
+cat /config/env.sh >> /etc/profile.d/winccoa.sh; \
+[ ! -f /config/shield.txt ] || cp /config/shield.txt /opt/WinCC_OA/current/;
+ENV PATH="/opt/WinCC_OA/current/bin:/config:${PATH}"
+CMD ["WCCILpmon", "-autoreg", "-config", "/proj/default/config/config"]
