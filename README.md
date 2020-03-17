@@ -4,7 +4,7 @@ This repository contains Dockerfiles and samples to build Docker images for WinC
 
 ## Build Docker Image
 
-Download and unzip the CentOS WinCC OA rpm's to the software directory.  
+Download and unzip the CentOS WinCC OA rpm's to the [centos](centos)/software directory.  
 
 Only put those WinCC OA rpm's into the directory which you want to have installed in your image. For a minimum image you only need the base packag of WinCC OA.
 
