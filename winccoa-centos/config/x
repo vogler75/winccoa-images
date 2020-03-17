@@ -1,5 +1,0 @@
-#!/bin/sh
-if [ -f /proj/default/config/config ] && [ ! -f /etc/opt/pvss/pvssInst.done ]
-then
-echo "x"
-fi
