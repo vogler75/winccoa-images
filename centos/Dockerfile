@@ -10,4 +10,5 @@ cat /config/env.sh >> /etc/environment; \
 cat /config/env.sh >> /etc/profile.d/winccoa.sh; \
 [ ! -f /config/shield.txt ] || cp /config/shield.txt /opt/WinCC_OA/current/;
 ENV PATH="/opt/WinCC_OA/current/bin:/config:${PATH}"
+SHELL ["/bin/bash", "-c"]
 CMD ["WCCILpmon", "-autoreg", "-config", "/proj/default/config/config"]
