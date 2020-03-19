@@ -5,4 +5,4 @@ docker run -ti --rm \
 -v /proj/DemoApplication_3.16/config/progs.ui:/proj/default/config/progs \
 -v /proj/DemoApplication_3.16/config/config.ui:/proj/default/config/config \
 winccoa:3.16 \
-bash
+bash -i -c "reg.sh;WCCOAui -console"
