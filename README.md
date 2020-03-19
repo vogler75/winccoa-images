@@ -79,7 +79,7 @@ winccoa:3.16 \
 WCCOAui -projAdmin
 ```
 
-## Start Console Administartion as Container
+## Start Console Administration as Container
 ```
 docker run -ti --rm \
 --network vcm_default \
@@ -89,10 +89,7 @@ docker run -ti --rm \
 -v /proj/default/config/progs.ui:/proj/default/config/progs \
 -v /proj/default/config/config.ui:/proj/default/config/config \
 winccoa:3.16 \
-bash
-
-> reg.sh
-> startConsole
+bash -i -c "reg.sh;WCCOAui -console"
 ```
 
 
